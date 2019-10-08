@@ -1,0 +1,25 @@
+.contenedor{
+width: 100%;
+max-width: 1000px;
+margin: 0 auto;
+border: 5px solid #ccc;
+overflow: hidden;
+}
+
+.bloque_principal{
+	width: 50%;
+	border: 5px solid #fff;
+	border-right: 10px solid #fff;
+	float: left;
+	background: #000;
+	box-sizing: border-box;
+}
+
+ .bloque_mapa, .bloque_detalles{
+	width: 50%;
+	height: 200px;
+	border: 5px solid #fff;
+	float: left;
+	background: #000;
+	box-sizing: border-box;
+}
