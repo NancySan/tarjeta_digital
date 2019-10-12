@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px){
+	.icono img{
+		top: -54px;
+		left: 92%;
+		width: 27px;
+	}
+
+	.bloque_detalles h4{
+		top: 5px;
+	}
+
+	.bloque_detalles div{
+		top: 3px;
+	}
+}
+
+@media screen and (max-width: 320px){
+.contenedor{
+	grid-template-areas: "bloque_principal bloque_principal"
+						"bloque_mapa bloque_mapa"
+						"bloque_detalles bloque_detalles";
+	}
+}
+
+@media screen and (max-width: 375px){
+.contenedor{
+	grid-template-areas: "bloque_principal bloque_principal"
+						"bloque_mapa bloque_mapa"
+						"bloque_detalles bloque_detalles";
+	}
+}
+
+@media screen and (max-width: 414px){
+.contenedor{
+	grid-template-areas: "bloque_principal bloque_principal"
+						"bloque_mapa bloque_mapa"
+						"bloque_detalles bloque_detalles";
+	}
+}
