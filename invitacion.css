@@ -6,15 +6,24 @@ border: 5px solid #ccc;
 overflow: hidden;
 
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	 
+	grid-template-columns: 
+							[bloque_principal-start] 1fr	
+							[bloque_principal-end bloque_mapa-start] 1fr
+							[bloque_mapa-end];
+	grid-template-rows: 
+						[bloque_mapa-start]1fr
+						[bloque_mapa-end bloque_detalles-start] 1fr
+						[bloque_detalles-end];
+
 	grid-template-areas: "bloque_principal bloque_mapa"
-						"bloque_principal bloque_detalles";
+					     "bloque_principal bloque_detalles"; 
 }
 
 .bloque_principal{
-	height: 600px;
+	height: auto;
 	border-right: 10px solid #fff;
+	grid-column: bloque_principal-start / bloque_principal-end;
+	grid-row: bloque_principal-start / bloque_mapa-end;
 	grid-area: bloque_principal;
 }
 
@@ -28,14 +37,18 @@ overflow: hidden;
 }
 
 	.bloque_mapa{
+		height: auto;
+		grid-column:bloque_principal-end / bloque_mapa-end;
+		grid-row: bloque_mapa-start /bloque_mapa-end;
 		grid-area: bloque_mapa;
-		height: 300px;
 	}
 
 	.bloque_detalles{
+		grid-column: bloque_principal-end /bloque_detalles-end;
+		grid-row: bloque_mapa-end /bloque_detalles end;
+		height: auto;
 		grid-area: bloque_detalles;
-		height: 300px;
-	}
+}
 
 .bloque_principal img{
 	width: 90px;
@@ -81,7 +94,7 @@ overflow: hidden;
 h1, h4, h5{
 	text-align: center;
 	position: relative;
-	top: 24px;
+	top: 24px; 
 }
 
 .bloque_detalles div{
