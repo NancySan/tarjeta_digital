@@ -6,24 +6,14 @@ border: 5px solid #ccc;
 overflow: hidden;
 
 	display: grid;
-	grid-template-columns: 
-							[bloque_principal-start] 1fr	
-							[bloque_principal-end bloque_mapa-start] 1fr
-							[bloque_mapa-end];
-	grid-template-rows: 
-						[bloque_mapa-start]1fr
-						[bloque_mapa-end bloque_detalles-start] 1fr
-						[bloque_detalles-end];
 
 	grid-template-areas: "bloque_principal bloque_mapa"
 					     "bloque_principal bloque_detalles"; 
 }
 
 .bloque_principal{
-	height: auto;
+	max-height: auto;
 	border-right: 10px solid #fff;
-	grid-column: bloque_principal-start / bloque_principal-end;
-	grid-row: bloque_principal-start / bloque_mapa-end;
 	grid-area: bloque_principal;
 }
 
@@ -37,16 +27,12 @@ overflow: hidden;
 }
 
 	.bloque_mapa{
-		height: auto;
-		grid-column:bloque_principal-end / bloque_mapa-end;
-		grid-row: bloque_mapa-start /bloque_mapa-end;
+		max-height: auto;
 		grid-area: bloque_mapa;
 	}
 
 	.bloque_detalles{
-		grid-column: bloque_principal-end /bloque_detalles-end;
-		grid-row: bloque_mapa-end /bloque_detalles end;
-		height: auto;
+		max-height: auto;
 		grid-area: bloque_detalles;
 }
 
@@ -97,22 +83,73 @@ h1, h4, h5{
 	top: 24px; 
 }
 
-.bloque_detalles div{
+/* - Tareas - */
+.tareas div{
 	width: 40%;
 	position: relative;
-	top: 20px;
+	top: 15px;
 	margin: auto;
-	display: block;
+	display: block; 
 	border-top: 1px solid #1f1e1e;
 	border-bottom: 1px solid #1f1e1e;
 	border-right: 1px solid #fff;
 	border-left: 1px solid #fff;
 }
 
-.bloque_detalles ul li{
+.tareas .lista li {
+	list-style: none;
 	position: relative;
 	right: 15px;
-	padding: 5px;
-	list-style-type:none;
 	text-align: center;
 }
+ 
+.tareas .lista li a {
+	color: #fff;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+ 
+.tareas .lista li a:hover {
+	text-decoration: line-through;
+}
+
+.wrap {
+	margin: auto;
+	max-width: 800px;
+	width: 90%;
+	margin-bottom: 20px; 
+}
+ 
+.principal {
+	background: #161514;
+	color: #fff;
+	width: 100%;
+}
+
+.principal .formulario input[type=text] {
+	float: left;
+	margin-bottom: 10px;
+	padding: 5px;
+	width: 70%;
+}
+ 
+.principal .formulario input[type=text].error {
+	border: 5px solid #474645;
+	color: red;
+}
+ 
+.principal .formulario .boton {
+	float: right;
+	background: #1c1b1a;
+	border: 1px solid #474645;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	padding: 5px;
+}
+ 
+.principal .formulario .boton:hover {
+	border: 1px solid #fff;
+}
+ 

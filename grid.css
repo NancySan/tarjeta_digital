@@ -16,9 +16,10 @@
 
 @media screen and (max-width: 320px){
 .contenedor{
-	grid-template-rows:minmax(300px, 1fr)
- 						minmax(100px, 1fr)
- 						minmax(300px, 1fr);
+
+	grid-template-rows: minmax(min-content, 1fr)
+						minmax(min-content, 1fr)
+						minmax(min-content, 1fr);
 			
 
 	grid-template-areas: "bloque_principal bloque_principal"
@@ -29,9 +30,9 @@
 
 @media screen and (max-width: 375px){
 .contenedor{
-	grid-template-rows: minmax(300px, 1fr)
- 						minmax(100px, 1fr)
- 						minmax(300px, 1fr);
+	grid-template-rows: minmax(min-content, 600px)
+ 						minmax(min-content, 300px)
+ 						minmax(min-content, max-content);
 
 	grid-template-areas: "bloque_principal bloque_principal"
 						"bloque_mapa bloque_mapa"
@@ -41,9 +42,9 @@
 
 @media screen and (max-width: 414px){
 .contenedor{
-	grid-template-rows: minmax(300px, 1fr)
- 						minmax(100px, 1fr)
- 						minmax(300px, 1fr);
+	grid-template-rows: minmax(min-content, 600px)
+ 						minmax(min-content, 300px)
+ 						minmax(min-content, max-content);
 
 	grid-template-areas: "bloque_principal bloque_principal"
 						"bloque_mapa bloque_mapa"
